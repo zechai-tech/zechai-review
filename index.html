@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Zee Chai — Review Helper</title>
+  <meta name="description" content="Share your experience at Zee Chai. A quick review helps other chai lovers find us!">
+  <meta name="theme-color" content="#E8650A">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+
+    <!-- Subtle Faded Chai Cup Decoration in Top-Right Corner -->
+    <div class="bg-decoration" aria-hidden="true">
+      <img src="assets/chai-cup-illustration.png" alt="" class="cup-illustration bg-cup-img">
+    </div>
+
+    <!-- Header Area: Logo + Location -->
+    <header class="app-header" id="appHeader">
+      <div class="logo-wrapper">
+        <a href="#appHeader" class="brand-logo-container" id="brandLogo" aria-label="Zee Chai Home">
+          <img src="assets/zee-chai-logo.png" alt="Zee Chai — One Cup Every Day" class="logo-img">
+        </a>
+      </div>
+
+      <!-- Active Outlet Location Badge -->
+      <div id="outletBadge" class="outlet-pill" style="display: none;">
+        <svg class="pill-pin-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <span id="outletBadgeText">Taliparamba</span>
+      </div>
+    </header>
+
+    <main class="main-content">
+
+      <!-- ======================================================== -->
+      <!-- FALLBACK SCREEN: OUTLET SELECTOR                         -->
+      <!-- ONLY shown when there is NO ?outlet param or unknown     -->
+      <!-- ======================================================== -->
+      <section id="screenOutletSelect" class="screen-view fallback-view" style="display: none;">
+        <div class="screen-header text-center">
+          <h1 class="view-title">Write a Quick Google Review</h1>
+          <p class="view-subtitle">Select your outlet:</p>
+        </div>
+
+        <div class="outlet-list-container" id="outletListContainer">
+          <!-- Populated from outlets config if fallback triggers -->
+        </div>
+
+        <div class="footer-note">
+          <p>Scan the QR code at your table to jump straight to your outlet.</p>
+        </div>
+      </section>
+
+
+      <!-- ======================================================== -->
+      <!-- MAIN SINGLE-PAGE REVIEW FLOW                             -->
+      <!-- ======================================================== -->
+      <section id="screenReviewFlow" class="screen-view">
+        
+        <!-- Welcome Heading -->
+        <div class="screen-header text-center">
+          <h1 class="view-title" id="experienceHeading">How was your visit?</h1>
+          <p class="view-subtitle" id="experienceSubtitle">A quick review helps other chai lovers find us.</p>
+        </div>
+
+        <!-- Section 3: Positive Tags -->
+        <div class="tag-section" id="tagSectionContainer">
+          <div class="section-label-row">
+            <span class="section-indicator positive-indicator"></span>
+            <h2 class="section-label">What did you like?</h2>
+          </div>
+          <div class="chips-flex-wrap" id="positiveTagsWrap">
+            <!-- Dynamically populated pill buttons with inline SVGs -->
+          </div>
+        </div>
+
+        <!-- Section 4: Negative/Critical Tags -->
+        <div class="tag-section mt-md">
+          <div class="section-label-row">
+            <span class="section-indicator neutral-indicator"></span>
+            <h2 class="section-label">Anything we could improve?</h2>
+          </div>
+          <div class="chips-flex-wrap" id="negativeTagsWrap">
+            <!-- Dynamically populated pill buttons with inline SVGs -->
+          </div>
+        </div>
+
+        <!-- ======================================================== -->
+        <!-- Section 5: CONDITIONAL OUTPUT AREA                       -->
+        <!-- ======================================================== -->
+        <div class="review-output-section" id="reviewOutputSection">
+          
+          <!-- CASE A: POSITIVE FLOW (OR INITIAL STATE) -->
+          <div id="positiveFlowContainer" class="flow-block">
+            <!-- CTA: "Write it for me" Button -->
+            <div id="generateCtaWrapper" class="cta-wrapper">
+              <button id="btnWriteForMe" class="btn btn-primary btn-block btn-lg" disabled>
+                <span class="btn-text" id="btnWriteForMeText">Pick what you liked first</span>
+              </button>
+            </div>
+
+            <!-- Draft Output Area (Reveals on the SAME page) -->
+            <div id="draftOutputWrapper" class="draft-output-card" style="display: none;">
+              
+              <div class="draft-top-bar">
+                <a href="#tagSectionContainer" class="btn-change-selections" id="btnChangeSelections">
+                  ← Change selections
+                </a>
+                <button type="button" class="btn-inline-regenerate" id="btnRegenerateDraft" title="Get different wording">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="23 4 23 10 17 10"></polyline>
+                    <polyline points="1 20 1 14 7 14"></polyline>
+                    <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                  </svg>
+                  Try different words
+                </button>
+              </div>
+
+              <div class="draft-helper-text">
+                Change anything you like, then copy it:
+              </div>
+
+              <div class="textarea-wrapper">
+                <textarea id="positiveDraftTextarea" class="review-textarea" rows="3" placeholder="Your review will appear here..."></textarea>
+              </div>
+
+              <div class="draft-actions-wrapper">
+                <!-- SINGLE MAIN PRIMARY BUTTON -->
+                <button id="btnCopyAndOpenGoogle" class="btn btn-primary btn-block btn-xl">
+                  <span class="btn-text">Copy & Open Google →</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CASE B: NEGATIVE FLOW (ANY NEGATIVE TAG SELECTED) -->
+          <div id="negativeFlowContainer" class="flow-block" style="display: none;">
+            <div class="negative-card">
+              <div class="negative-header">
+                <span class="negative-badge">😔 We're listening</span>
+                <h3 class="negative-title">We're sorry to hear that</h3>
+                <p class="negative-sub">Your feedback helps us improve. Tell us what happened — we'd love to make it right.</p>
+              </div>
+
+              <div class="textarea-wrapper">
+                <textarea id="negativeFeedbackTextarea" class="review-textarea" rows="3" placeholder="Tell us what went wrong — we'd love to make it right."></textarea>
+              </div>
+
+              <!-- Primary: WhatsApp Direct Channel to Outlet Manager -->
+              <div class="feedback-channels">
+                <a id="btnWhatsAppChannel" class="action-card whatsapp-channel" target="_blank" rel="noopener noreferrer">
+                  <div class="channel-icon-circle whatsapp-bg">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="#FFFFFF">
+                      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.11 7.44C8.95 7.44 8.7 7.5 8.5 7.72C8.3 7.94 7.72 8.48 7.72 9.58C7.72 10.68 8.52 11.75 8.63 11.9C8.74 12.05 10.2 14.31 12.44 15.28C14.3 16.09 14.68 15.93 15.09 15.89C15.5 15.85 16.41 15.35 16.6 14.81C16.79 14.27 16.79 13.81 16.73 13.71C16.67 13.62 16.52 13.56 16.3 13.45C16.08 13.34 15 12.81 14.8 12.74C14.6 12.67 14.45 12.63 14.3 12.85C14.15 13.07 13.72 13.58 13.59 13.73C13.46 13.88 13.33 13.9 13.11 13.79C12.89 13.68 12.18 13.45 11.34 12.7C10.69 12.12 10.25 11.4 10.12 11.18C10 10.96 10.11 10.84 10.22 10.73C10.32 10.63 10.44 10.47 10.56 10.33C10.67 10.19 10.71 10.08 10.78 9.93C10.86 9.79 10.82 9.66 10.76 9.55C10.71 9.44 10.27 8.35 10.08 7.91C9.9 7.48 9.72 7.54 9.58 7.53C9.45 7.53 9.3 7.53 9.15 7.53L9.11 7.44Z"/>
+                    </svg>
+                  </div>
+                  <div class="channel-details">
+                    <span class="channel-title">Talk to Outlet Manager</span>
+                    <span class="channel-desc">Private WhatsApp message to solve this directly</span>
+                  </div>
+                  <span class="channel-arrow">→</span>
+                </a>
+
+                <div class="divider-text">
+                  <span>OR POST DIRECTLY TO GOOGLE</span>
+                </div>
+
+                <!-- Secondary: Copy & Open Google for Negative review -->
+                <button id="btnCopyAndOpenGoogleNegative" class="btn btn-outline-dark btn-block btn-lg">
+                  <span class="btn-text">Copy & Open Google →</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- Floating Toast Notification -->
+    <div id="toastNotification" class="toast-popup" role="status" aria-live="polite">
+      <span class="toast-icon">✓</span>
+      <span class="toast-message" id="toastMessage">Copied! Opening Google Reviews...</span>
+    </div>
+
+    <!-- Minimal Brand Footer -->
+    <footer class="app-footer">
+      <div class="footer-cup-icon" aria-hidden="true">☕</div>
+      <p class="copyright">Zee Chai © 2026 • One Cup Every Day</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

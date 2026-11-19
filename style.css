@@ -1,0 +1,800 @@
+/* ========================================================
+   ZEE CHAI GOOGLE REVIEW HELPER — STYLESHEET
+   Brand Colors:
+   - Primary: #E8650A (Warm Chai Orange)
+   - Primary Dark: #C75204
+   - Primary Light: #FFF3E8
+   - Background: #FFFFFF (Clean White)
+   - Card Background: #FFF8F0 (Soft Cream / Off-White)
+   - Text Primary: #1A1A1A (Dark Charcoal)
+   - Text Secondary: #4B5563
+   - Minimum Tap Target: 44px (Touch-First)
+   ======================================================== */
+
+:root {
+  --primary: #E8650A;
+  --primary-hover: #D35604;
+  --primary-active: #BF4C02;
+  --primary-light: #FFF2E8;
+  --primary-glow: rgba(232, 101, 10, 0.22);
+  
+  --bg-page: #FFFFFF;
+  --bg-card: #FFF8F0;
+  --bg-secondary: #F9FAFB;
+  
+  --text-primary: #1A1A1A;
+  --text-secondary: #4B5563;
+  --text-muted: #6B7280;
+  
+  --border-light: #F1E5D8;
+  --border-subtle: #E5E7EB;
+  
+  --whatsapp-color: #25D366;
+  --whatsapp-light: #E8F9EE;
+  
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 9999px;
+  
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 4px 16px rgba(232, 101, 10, 0.07), 0 1px 3px rgba(0, 0, 0, 0.03);
+  --shadow-button: 0 4px 14px rgba(232, 101, 10, 0.28);
+  
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
+  
+  --transition: 160ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base Reset & Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 16px;
+  background-color: #F7F5F0;
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F7F5F0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-x: hidden;
+}
+
+/* App Container (Strict Mobile-First Max-Width 480px, Centered) */
+.app-container {
+  width: 100%;
+  max-width: 480px;
+  min-height: 100vh;
+  background-color: var(--bg-page);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1.15rem 1.15rem 2.5rem;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.05);
+  overflow-x: hidden;
+}
+
+/* Subtle Chai Cup Watermark in Top-Right Corner */
+.bg-decoration {
+  position: absolute;
+  top: -15px;
+  right: -20px;
+  width: 155px;
+  height: 175px;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.bg-cup-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.12;
+  transform: rotate(8deg);
+}
+
+/* ========================================================
+   HEADER & BRANDING
+   ======================================================== */
+.app-header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.25rem 0 0.95rem;
+}
+
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.brand-logo-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  max-width: 235px;
+  transition: transform var(--transition);
+}
+
+.brand-logo-container:active {
+  transform: scale(0.98);
+}
+
+.logo-img {
+  width: 100%;
+  max-height: 56px;
+  object-fit: contain;
+  display: block;
+}
+
+.outlet-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.95rem;
+  background-color: var(--primary-light);
+  border: 1px solid rgba(232, 101, 10, 0.25);
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  min-height: 32px;
+}
+
+.pill-pin-svg {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+/* ========================================================
+   MAIN CONTENT & SCREENS
+   ======================================================== */
+.main-content {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.screen-view {
+  display: flex;
+  flex-direction: column;
+}
+
+.screen-header {
+  margin-bottom: 1.25rem;
+}
+
+.screen-header.text-center {
+  text-align: center;
+}
+
+.view-title {
+  font-family: var(--font-heading);
+  font-size: 1.38rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.25;
+  margin-bottom: 0.35rem;
+}
+
+.view-subtitle {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* ========================================================
+   TAG SECTIONS & TOUCH-OPTIMIZED PILL CHIPS WITH SVGS
+   ======================================================== */
+.tag-section {
+  margin-bottom: 1.25rem;
+}
+
+.tag-section.mt-md {
+  margin-top: 0.35rem;
+}
+
+.section-label-row {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.75rem;
+}
+
+.section-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.positive-indicator {
+  background-color: var(--primary);
+}
+
+.neutral-indicator {
+  background-color: #9CA3AF;
+}
+
+.section-label {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Natural Flex-Wrap Flow for Thumb Tapping */
+.chips-flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 0.65rem;
+}
+
+/* Capsule / Pill Button (Minimum 44px height for thumb-friendly tapping) */
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 44px;
+  padding: 0.6rem 1.05rem;
+  background-color: #FFFFFF;
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-family);
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #2D3139;
+  cursor: pointer;
+  user-select: none;
+  transition: all var(--transition);
+  outline: none;
+  white-space: nowrap;
+}
+
+.tag-pill:active {
+  transform: scale(0.96);
+}
+
+/* Inline SVG Icon styling */
+.tag-svg-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  transition: color var(--transition);
+}
+
+/* Unselected Positive: Brand Orange Icon */
+.tag-pill.positive .tag-svg-icon {
+  color: var(--primary);
+}
+
+/* Unselected Negative: Muted Slate Icon */
+.tag-pill.negative .tag-svg-icon {
+  color: #64748B;
+}
+
+.tag-pill-text {
+  line-height: 1.2;
+}
+
+/* Positive Tag Selected State (Vibrant Orange Fill, White Text & Icon) */
+.tag-pill.positive.selected {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #FFFFFF;
+  font-weight: 600;
+  box-shadow: 0 3px 10px rgba(232, 101, 10, 0.28);
+  transform: translateY(-1px);
+}
+
+.tag-pill.positive.selected .tag-svg-icon {
+  color: #FFFFFF;
+}
+
+/* Negative Tag Selected State (Soft Muted Slate, NOT RED) */
+.tag-pill.negative {
+  background-color: #F8FAFC;
+  border-color: #E2E8F0;
+  color: #475569;
+}
+
+.tag-pill.negative.selected {
+  background-color: #475569;
+  border-color: #334155;
+  color: #FFFFFF;
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgba(71, 85, 105, 0.22);
+  transform: translateY(-1px);
+}
+
+.tag-pill.negative.selected .tag-svg-icon {
+  color: #FFFFFF;
+}
+
+/* ========================================================
+   REVIEW OUTPUT AREA (SMOOTH ACCORDION REVEAL ON SAME PAGE)
+   ======================================================== */
+.review-output-section {
+  margin-top: 0.85rem;
+}
+
+.flow-block {
+  animation: fadeIn 220ms ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.cta-wrapper {
+  margin-top: 0.75rem;
+}
+
+/* Draft Output Card */
+.draft-output-card {
+  background-color: var(--bg-card);
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.15rem;
+  box-shadow: var(--shadow-card);
+  margin-top: 0.85rem;
+  animation: fadeIn 240ms ease forwards;
+}
+
+.draft-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.65rem;
+}
+
+.btn-change-selections {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+  padding: 0.3rem 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-change-selections:hover {
+  text-decoration: underline;
+}
+
+.btn-inline-regenerate {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition);
+}
+
+.btn-inline-regenerate:hover {
+  background-color: var(--primary-light);
+}
+
+.draft-helper-text {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.65rem;
+}
+
+.textarea-wrapper {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+/* Textarea auto-expands so it never scrolls inside on phone */
+.review-textarea {
+  width: 100%;
+  min-height: 110px;
+  background-color: #FFFFFF;
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 0.95rem 1rem;
+  font-family: var(--font-family);
+  font-size: 1rem; /* 16px to prevent iOS auto-zoom on focus */
+  line-height: 1.55;
+  color: var(--text-primary);
+  resize: none;
+  outline: none;
+  overflow: hidden;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.review-textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-glow);
+}
+
+.draft-actions-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* ========================================================
+   CASE B: NEGATIVE FEEDBACK CARD
+   ======================================================== */
+.negative-card {
+  background-color: #FAF6F0;
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.15rem;
+  box-shadow: var(--shadow-sm);
+  margin-top: 0.5rem;
+}
+
+.negative-header {
+  margin-bottom: 0.85rem;
+}
+
+.negative-badge {
+  display: inline-block;
+  background-color: #E5E7EB;
+  color: #374151;
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 0.45rem;
+}
+
+.negative-title {
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.negative-sub {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.feedback-channels {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.action-card {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.95rem 1.05rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  min-height: 52px;
+  transition: all var(--transition);
+  cursor: pointer;
+}
+
+.action-card.whatsapp-channel {
+  background-color: var(--whatsapp-light);
+  border: 1.5px solid rgba(37, 211, 102, 0.3);
+}
+
+.action-card.whatsapp-channel:hover, .action-card.whatsapp-channel:active {
+  background-color: #D8F5E1;
+  border-color: var(--whatsapp-color);
+  transform: translateY(-1px);
+}
+
+.channel-icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.channel-icon-circle.whatsapp-bg {
+  background-color: var(--whatsapp-color);
+  box-shadow: 0 3px 8px rgba(37, 211, 102, 0.28);
+}
+
+.channel-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.channel-title {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: #0E5C2A;
+  line-height: 1.25;
+}
+
+.channel-desc {
+  font-size: 0.78rem;
+  color: #2F7A4A;
+  margin-top: 0.15rem;
+}
+
+.channel-arrow {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1EBE5D;
+}
+
+.divider-text {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0.35rem 0;
+}
+
+.divider-text::before, .divider-text::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.divider-text span {
+  padding: 0 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+/* ========================================================
+   SCREEN 0: OUTLET SELECTOR FALLBACK (CLEAN & MODERN)
+   ======================================================== */
+.fallback-view .screen-header {
+  margin-top: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.outlet-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.outlet-card-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+  padding: 1.05rem 1.2rem;
+  background-color: var(--bg-card);
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.outlet-card-item:hover, .outlet-card-item:active {
+  background-color: #FFF2E6;
+  border-color: var(--primary);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-card);
+}
+
+.outlet-card-left {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.outlet-store-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: var(--primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.outlet-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.outlet-card-title {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.outlet-card-sub {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.outlet-arrow-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.footer-note {
+  margin-top: 1.8rem;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* ========================================================
+   BUTTONS (MOBILE TOUCH-OPTIMIZED)
+   ======================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 48px;
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-family: var(--font-family);
+  font-size: 0.98rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--transition);
+  border: 1.5px solid transparent;
+  outline: none;
+}
+
+.btn-lg {
+  min-height: 52px;
+  font-size: 1.02rem;
+}
+
+.btn-xl {
+  min-height: 56px;
+  font-size: 1.06rem;
+  letter-spacing: 0.01em;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-button);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active:not(:disabled) {
+  background-color: var(--primary-active);
+  transform: translateY(0);
+}
+
+.btn-primary:disabled {
+  background-color: #E5E7EB;
+  color: #9CA3AF;
+  box-shadow: none;
+  cursor: not-allowed;
+  border-color: transparent;
+}
+
+.btn-outline-dark {
+  background-color: #FFFFFF;
+  color: #374151;
+  border: 1.5px solid #D1D5DB;
+}
+
+.btn-outline-dark:hover {
+  background-color: #F9FAFB;
+  border-color: #9CA3AF;
+}
+
+/* ========================================================
+   TOAST POPUP NOTIFICATION
+   ======================================================== */
+.toast-popup {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background-color: #1F2937;
+  color: #FFFFFF;
+  padding: 0.85rem 1.45rem;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 240ms cubic-bezier(0.16, 1, 0.3, 1), opacity 240ms ease;
+}
+
+.toast-popup.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.toast-icon {
+  font-size: 1rem;
+  color: #10B981;
+}
+
+/* ========================================================
+   FOOTER
+   ======================================================== */
+.app-footer {
+  margin-top: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.footer-cup-icon {
+  font-size: 1.15rem;
+  opacity: 0.7;
+}
+
+.copyright {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
