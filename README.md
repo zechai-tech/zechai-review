@@ -51,14 +51,14 @@ const outlets = {
     id: "taliparamba",
     name: "Zechai Taliparamba",
     shortName: "Taliparamba",
-    googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJm0uMVgA_pDsRTY-5lyHhLSM",
+    googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJmUuMVgA_pDsRTY-5ly7h7SM",
     whatsapp: "918086052565" // Format: Country code + number without +
   },
   "palakkad": {
     id: "palakkad",
     name: "Zechai Palakkad",
     shortName: "Palakkad",
-    googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJW8ZAvBzxpzsRYHoqWSPD_0w",
+    googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJaYxfHQBtqDsROu9Gd-qUqpQ",
     whatsapp: "918129129031"
   }
 };

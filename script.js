@@ -27,7 +27,7 @@ const outlets = {
     name: "Zechai Taliparamba",
     shortName: "Taliparamba",
     // Direct Google Review Form URL (Works on both desktop and mobile)
-    googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJm0uMVgA_pDsRTY-5lyHhLSM",
+    googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJmUuMVgA_pDsRTY-5ly7h7SM",
     // Manager WhatsApp Number
     whatsapp: "918086052565"
   },
@@ -36,7 +36,7 @@ const outlets = {
     name: "Zechai Palakkad",
     shortName: "Palakkad",
     // Direct Google Review Form URL (Works on both desktop and mobile)
-    googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJW8ZAvBzxpzsRYHoqWSPD_0w",
+    googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJaYxfHQBtqDsROu9Gd-qUqpQ",
     // Manager WhatsApp Number
     whatsapp: "918129129031"
   }
