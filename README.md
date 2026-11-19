@@ -52,13 +52,13 @@ const outlets = {
     googleReviewUrl: "https://www.google.com/search?q=Zechai+Thaliparamba#lrd=0x3ba43f00568c4b99:0x23ede12e97b98f4d,3,,,,",
     whatsapp: "918086052565" // Format: Country code + number without +
   },
-  "kannur": {
-    id: "kannur",
-    name: "Zechai Kannur",
-    shortName: "Kannur",
-    googleReviewUrl: "https://www.google.com/search?q=Zechai+Kannur#lrd=...,3,,,,",
-    whatsapp: "919876543210"
-  }
+  "palakkad": {
+    id: "palakkad",
+    name: "Zechai Palakkad",
+    shortName: "Palakkad",
+    googleReviewUrl: "https://www.google.com/search?q=zechai+palakad#lrd=0x3ba7f11cbc40c65b:0x4cffc324592a7a60,3,,,,",
+    whatsapp: "918129129031"
+  },
 };
 ```
 

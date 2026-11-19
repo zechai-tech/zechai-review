@@ -34,7 +34,7 @@ const outlets = {
     name: "Zechai Palakkad",
     shortName: "Palakkad",
     // Direct Google Review Form Popup URL
-    googleReviewUrl: "https://www.google.com/search?q=Zechai+Palakkad#lrd=0x3ba7f11cbc40c65b:0x4cffc324592a7a60,3,,,,",
+    googleReviewUrl: "https://www.google.com/search?q=zechai+palakad#lrd=0x3ba7f11cbc40c65b:0x4cffc324592a7a60,3,,,,",
     // Manager WhatsApp Number
     whatsapp: "918129129031"
   }
@@ -499,17 +499,16 @@ negativeFeedbackTextarea.addEventListener("input", () => {
 // ==============================================================================
 
 function executeCopyAndOpenGoogle(reviewText) {
+  const targetUrl = currentOutlet ? currentOutlet.googleReviewUrl : "https://www.google.com";
+
   // Step 1: Copy to clipboard
   copyToClipboard(reviewText);
 
   // Step 2: Confirmation toast
   showToast("Copied! Opening Google Reviews...");
 
-  // Step 3: Open direct review form URL after 500ms delay
-  const targetUrl = currentOutlet ? currentOutlet.googleReviewUrl : "https://search.google.com";
-  setTimeout(() => {
-    window.open(targetUrl, "_blank");
-  }, 500);
+  // Step 3: Open direct review form URL in a new tab
+  window.open(targetUrl, "_blank");
 }
 
 // PRIMARY: Copy & Open Google (Positive Flow)
