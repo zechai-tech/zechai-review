@@ -60,6 +60,20 @@ const outlets = {
     shortName: "Palakkad",
     googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJaYxfHQBtqDsROu9Gd-qUqpQ",
     whatsapp: "918129129031"
+  },
+  "manjeri": {
+    id: "manjeri",
+    name: "Zechai Manjeri",
+    shortName: "Manjeri",
+    googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJIflZzME3pjsRwebfN_s05mE",
+    whatsapp: "919633500530"
+  },
+  "nilambur": {
+    id: "nilambur",
+    name: "Zechai Nilambur",
+    shortName: "Nilambur",
+    googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJlTOHfI89pjsRjNoF1E9-HHM",
+    whatsapp: "916238673946"
   }
 };
 ```
@@ -91,6 +105,8 @@ For each physical outlet, generate a QR code pointing to its URL:
 
 | Outlet | QR Code Target URL |
 |---|---|
+| **Nilambur** | `https://review.zechai.in?outlet=nilambur` |
+| **Manjeri** | `https://review.zechai.in?outlet=manjeri` |
 | **Palakkad** | `https://review.zechai.in?outlet=palakkad` |
 | **Taliparamba** | `https://review.zechai.in?outlet=taliparamba` |
 | **Default / Fallback** | `https://review.zechai.in` |

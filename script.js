@@ -39,6 +39,24 @@ const outlets = {
     googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJaYxfHQBtqDsROu9Gd-qUqpQ",
     // Manager WhatsApp Number
     whatsapp: "918129129031"
+  },
+  "manjeri": {
+    id: "manjeri",
+    name: "Zechai Manjeri",
+    shortName: "Manjeri",
+    // Direct Google Review Form URL (Works on both desktop and mobile)
+    googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJIflZzME3pjsRwebfN_s05mE",
+    // Manager WhatsApp Number
+    whatsapp: "919633500530"
+  },
+  "nilambur": {
+    id: "nilambur",
+    name: "Zechai Nilambur",
+    shortName: "Nilambur",
+    // Direct Google Review Form URL (Works on both desktop and mobile)
+    googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJlTOHfI89pjsRjNoF1E9-HHM",
+    // Manager WhatsApp Number
+    whatsapp: "916238673946"
   }
 };
 
