@@ -89,6 +89,7 @@ For each physical outlet, generate a QR code pointing to its URL:
 
 | Outlet | QR Code Target URL |
 |---|---|
+| **Palakkad** | `https://review.zechai.in?outlet=palakkad` |
 | **Taliparamba** | `https://review.zechai.in?outlet=taliparamba` |
 | **Default / Fallback** | `https://review.zechai.in` |
 
