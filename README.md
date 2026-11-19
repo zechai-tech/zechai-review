@@ -37,11 +37,13 @@ zechai-review/
 Open `script.js` and locate `const outlets`. Add new outlets using this structure:
 
 > [!IMPORTANT]
-> The Google review URL must open the review FORM directly. To get it:
-> 1. Google search the outlet name (e.g., 'Zechai Taliparamba')
-> 2. On the Google result, click 'Write a review' on the business card
-> 3. When the review popup opens, copy the full URL from the address bar
-> 4. That URL (usually contains `#lrd=` at the end) is what goes in `googleReviewUrl`
+> The Google review URL must open the review FORM directly on both desktop and mobile.
+> URL format: `https://search.google.com/local/writereview?placeid=PLACE_ID`
+> To find/confirm a Place ID:
+> 1. Go to [Google Places Place ID Finder](https://developers.google.com/maps/documentation/places/web-service/place-id)
+> 2. Search for the outlet name (e.g., 'Zechai Taliparamba' or 'Zechai Palakkad')
+> 3. Copy the Place ID
+> 4. Test: `https://search.google.com/local/writereview?placeid=PLACE_ID`
 
 ```javascript
 const outlets = {
@@ -49,16 +51,16 @@ const outlets = {
     id: "taliparamba",
     name: "Zechai Taliparamba",
     shortName: "Taliparamba",
-    googleReviewUrl: "https://www.google.com/search?q=Zechai+Thaliparamba#lrd=0x3ba43f00568c4b99:0x23ede12e97b98f4d,3,,,,",
+    googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJm0uMVgA_pDsRTY-5lyHhLSM",
     whatsapp: "918086052565" // Format: Country code + number without +
   },
   "palakkad": {
     id: "palakkad",
     name: "Zechai Palakkad",
     shortName: "Palakkad",
-    googleReviewUrl: "https://www.google.com/search?q=zechai+palakad#lrd=0x3ba7f11cbc40c65b:0x4cffc324592a7a60,3,,,,",
+    googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJW8ZAvBzxpzsRYHoqWSPD_0w",
     whatsapp: "918129129031"
-  },
+  }
 };
 ```
 
