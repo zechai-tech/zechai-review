@@ -1,6 +1,6 @@
 /**
  * ==============================================================================
- * ZEE CHAI — GOOGLE REVIEW HELPER
+ * ZEE CHAI - GOOGLE REVIEW HELPER
  * Multi-Outlet Static Review & Feedback Page
  *
  * NOTE:
