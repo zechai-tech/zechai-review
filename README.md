@@ -52,28 +52,28 @@ const outlets = {
     name: "Zechai Taliparamba",
     shortName: "Taliparamba",
     googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJmUuMVgA_pDsRTY-5ly7h7SM",
-    whatsapp: "918086052565" // Format: Country code + number without +
+    whatsapp: "919946671044" // Centralized feedback number across all outlets
   },
   "palakkad": {
     id: "palakkad",
     name: "Zechai Palakkad",
     shortName: "Palakkad",
     googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJaYxfHQBtqDsROu9Gd-qUqpQ",
-    whatsapp: "918129129031"
+    whatsapp: "919946671044"
   },
   "manjeri": {
     id: "manjeri",
     name: "Zechai Manjeri",
     shortName: "Manjeri",
     googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJIflZzME3pjsRwebfN_s05mE",
-    whatsapp: "919633500530"
+    whatsapp: "919946671044"
   },
   "nilambur": {
     id: "nilambur",
     name: "Zechai Nilambur",
     shortName: "Nilambur",
     googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJlTOHfI89pjsRjNoF1E9-HHM",
-    whatsapp: "916238673946"
+    whatsapp: "919946671044"
   }
 };
 ```

@@ -28,8 +28,8 @@ const outlets = {
     shortName: "Taliparamba",
     // Direct Google Review Form URL (Works on both desktop and mobile)
     googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJmUuMVgA_pDsRTY-5ly7h7SM",
-    // Manager WhatsApp Number
-    whatsapp: "918086052565"
+    // Centralized WhatsApp Number for feedback
+    whatsapp: "919946671044"
   },
   "palakkad": {
     id: "palakkad",
@@ -37,8 +37,8 @@ const outlets = {
     shortName: "Palakkad",
     // Direct Google Review Form URL (Works on both desktop and mobile)
     googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJaYxfHQBtqDsROu9Gd-qUqpQ",
-    // Manager WhatsApp Number
-    whatsapp: "918129129031"
+    // Centralized WhatsApp Number for feedback
+    whatsapp: "919946671044"
   },
   "manjeri": {
     id: "manjeri",
@@ -46,8 +46,8 @@ const outlets = {
     shortName: "Manjeri",
     // Direct Google Review Form URL (Works on both desktop and mobile)
     googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJIflZzME3pjsRwebfN_s05mE",
-    // Manager WhatsApp Number
-    whatsapp: "919633500530"
+    // Centralized WhatsApp Number for feedback
+    whatsapp: "919946671044"
   },
   "nilambur": {
     id: "nilambur",
@@ -55,8 +55,8 @@ const outlets = {
     shortName: "Nilambur",
     // Direct Google Review Form URL (Works on both desktop and mobile)
     googleReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJlTOHfI89pjsRjNoF1E9-HHM",
-    // Manager WhatsApp Number
-    whatsapp: "916238673946"
+    // Centralized WhatsApp Number for feedback
+    whatsapp: "919946671044"
   }
 };
 
