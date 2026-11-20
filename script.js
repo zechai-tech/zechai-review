@@ -198,7 +198,6 @@ const btnCopyAndOpenGoogle = document.getElementById("btnCopyAndOpenGoogle");
 
 const negativeFeedbackTextarea = document.getElementById("negativeFeedbackTextarea");
 const btnWhatsAppChannel = document.getElementById("btnWhatsAppChannel");
-const btnCopyAndOpenGoogleNegative = document.getElementById("btnCopyAndOpenGoogleNegative");
 
 const toastNotification = document.getElementById("toastNotification");
 const toastMessage = document.getElementById("toastMessage");
@@ -294,11 +293,15 @@ function updateWhatsAppLink() {
   if (!currentOutlet || !btnWhatsAppChannel) return;
 
   const notes = negativeFeedbackTextarea.value.trim();
-  let messageText = `Hi, I visited ${currentOutlet.name} and had some feedback`;
+  const outletDisplayName = currentOutlet.name.startsWith("Zechai")
+    ? currentOutlet.name
+    : `Zechai ${currentOutlet.name}`;
+
+  let messageText = "";
   if (notes) {
-    messageText += `: "${notes}"`;
+    messageText = `Hi, I visited ${outletDisplayName} and had some feedback: ${notes}`;
   } else {
-    messageText += "...";
+    messageText = `Hi, I visited ${outletDisplayName} and wanted to share some feedback.`;
   }
 
   const encodedMessage = encodeURIComponent(messageText);
@@ -531,17 +534,16 @@ function executeCopyAndOpenGoogle(reviewText) {
   window.open(targetUrl, "_blank");
 }
 
-// PRIMARY: Copy & Open Google (Positive Flow)
+// PRIMARY: Copy & Open Google (Positive Flow Only)
 btnCopyAndOpenGoogle.addEventListener("click", () => {
   const text = positiveDraftTextarea.value.trim();
   executeCopyAndOpenGoogle(text);
 });
 
-// PRIMARY: Copy & Open Google (Negative Flow)
-btnCopyAndOpenGoogleNegative.addEventListener("click", () => {
-  const text = negativeFeedbackTextarea.value.trim();
-  executeCopyAndOpenGoogle(text);
-});
+// Update WhatsApp link on click to ensure latest textarea content
+if (btnWhatsAppChannel) {
+  btnWhatsAppChannel.addEventListener("click", updateWhatsAppLink);
+}
 
 // Logo click resets to top
 const brandLogo = document.getElementById("brandLogo");
