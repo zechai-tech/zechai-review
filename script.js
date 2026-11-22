@@ -113,47 +113,110 @@ const sentenceBank = {
   "great-chai": [
     "Loved the chai here, really well made.",
     "The chai was excellent, perfectly brewed.",
-    "Best chai I've had in a while, hit the spot."
+    "Best chai I've had in a while, hit the spot.",
+    "Their chai is something else, you can taste the quality.",
+    "Chai was spot on, exactly how I like it.",
+    "Really enjoyed the chai, strong and flavorful.",
+    "The chai here stands out from the usual options around.",
+    "Perfectly balanced chai, not too sweet, not too strong.",
+    "Had the chai twice now and it's been great both times.",
+    "You can tell they take their chai seriously here."
   ],
   "quick-service": [
     "Got our order super quick, no waiting around.",
     "Service was fast, impressed by the speed.",
-    "Everything came out really quickly."
+    "Everything came out really quickly.",
+    "Didn't have to wait long at all, very efficient.",
+    "Order was ready before I even found a seat.",
+    "Quick turnaround even when it was busy.",
+    "They don't keep you waiting here, that's for sure.",
+    "In and out in minutes, perfect for a quick stop.",
+    "Surprisingly fast service for a place this popular.",
+    "No delays, everything was smooth and quick."
   ],
   "friendly-staff": [
     "The staff were really friendly and welcoming.",
     "Warm and friendly team, made the experience better.",
-    "Staff were polite and helpful throughout."
+    "Staff were polite and helpful throughout.",
+    "The people here are genuinely nice, felt welcomed.",
+    "Good vibes from the staff, they clearly enjoy what they do.",
+    "Everyone was courteous and attentive.",
+    "Staff greeted us with a smile, small thing but it matters.",
+    "Friendly crew running the place, very approachable.",
+    "The team here makes you feel like a regular from day one.",
+    "Polite and patient staff, even during rush hour."
   ],
   "value-for-money": [
     "Great value for the price.",
     "Very affordable for what you get.",
-    "Definitely worth every rupee."
+    "Definitely worth every rupee.",
+    "Pricing is fair, no complaints at all.",
+    "You get a lot for what you pay here.",
+    "Pocket friendly and the quality matches.",
+    "Good portions at reasonable prices.",
+    "One of the better deals around for chai and snacks.",
+    "Feels like you're getting more than what you pay for.",
+    "Affordable without cutting corners on taste."
   ],
   "clean-hygienic": [
     "The place was clean and well-maintained.",
     "Really liked how clean and hygienic everything was.",
-    "Neat and tidy setup, good to see."
+    "Neat and tidy setup, good to see.",
+    "Cleanliness was top notch, tables and counters spotless.",
+    "Hygienic preparation area, you can see them making it fresh.",
+    "Everything looked fresh and well kept.",
+    "Clean place, something I always check before sitting down.",
+    "They maintain the place really well, no complaints.",
+    "Pleasantly surprised by how clean everything was.",
+    "Well maintained space, gives you confidence in the food."
   ],
   "nice-location": [
     "Convenient location, easy to find.",
     "Good spot, comfortable seating too.",
-    "Nice location and pleasant atmosphere."
+    "Nice location and pleasant atmosphere.",
+    "Easy to get to and there's parking nearby.",
+    "The place has a nice feel to it, cozy and relaxed.",
+    "Great spot to sit and catch up over chai.",
+    "Location is convenient, right on the main road.",
+    "Comfortable space, not too crowded, not too empty.",
+    "Love the setup here, simple but inviting.",
+    "Good ambiance, makes you want to stay a bit longer."
   ],
   "would-recommend": [
     "Would definitely recommend to friends and family.",
     "Already told people about this place!",
-    "Will be coming back for sure."
+    "Will be coming back for sure.",
+    "Going to bring more people here next time.",
+    "If you haven't tried it yet, you should.",
+    "One of those places I keep going back to.",
+    "Recommended it to a few friends already.",
+    "This is my go to spot now for chai.",
+    "Would recommend without hesitation.",
+    "Plan to visit again soon, possibly with the whole crew."
   ],
   "good-snacks": [
     "The snacks were great too, not just the chai.",
     "Tried the snacks, solid options alongside the chai.",
-    "Food was good, nice variety."
+    "Food was good, nice variety.",
+    "Snacks complement the chai really well.",
+    "Had a few bites along with chai, everything was fresh.",
+    "Their snack menu has some good options worth trying.",
+    "The food here is underrated, pairs perfectly with chai.",
+    "Tried a couple of snacks and both were tasty.",
+    "Good snack selection, something for everyone.",
+    "Snacks were freshly made, you can tell the difference."
   ],
   "consistent-quality": [
     "Every visit, the quality stays the same, that's rare.",
     "They maintain their standard really well.",
-    "Consistent quality every time I come."
+    "Consistent quality every time I come.",
+    "Been here multiple times and it's always good.",
+    "No drop in quality across visits, that says a lot.",
+    "They don't have off days, always reliable.",
+    "Same great taste every single time.",
+    "Consistency is their strength, you know what you're getting.",
+    "Came back after a month and it was just as good.",
+    "Reliable quality, which is why I keep coming back."
   ]
 };
 

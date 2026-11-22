@@ -411,7 +411,14 @@ body {
   font-size: 0.86rem;
   font-weight: 600;
   color: var(--text-secondary);
-  margin-bottom: 0.65rem;
+  margin-bottom: 0.25rem;
+}
+
+.draft-nudge-text {
+  font-size: 12px;
+  color: #999999;
+  font-style: italic;
+  margin-bottom: 6px;
 }
 
 .textarea-wrapper {
